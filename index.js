@@ -9,7 +9,7 @@ fetchMyIP((error, ip) => {
 
   console.log('It worked! Returned IP:' , ip);
 });
-/*
+
 fetchCoordsByIP((err, data) => {
   if (err) {
     console.log("Error getting data" , err);
@@ -19,4 +19,3 @@ fetchCoordsByIP((err, data) => {
   console.log('It worked! GEO returned:' , data);
 
 });
-*/

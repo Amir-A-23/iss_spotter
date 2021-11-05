@@ -1,5 +1,5 @@
 const request = require('request');
-
+const {APIKEY} = require('./constants');
 /**
  * Makes a single API request to retrieve the user's IP address.
  * Input:
@@ -43,9 +43,8 @@ const fetchMyIP = function(callback) {
 
 const fetchCoordsByIP = function(callback) {
   //https://freegeoip.app/json/invalidIPHere
-  //https://api.freegeoip.app/json/?apikey=ed5e68f0-3dcd-11ec-b798-2dc540ab6678
   //use request to fetch IP address from JSON API
-  request('https://api.freegeoip.app/json/?apikey=ed5e68f0-3dcd-11ec-b798-2dc540ab6678', (error, response, body) => {
+  request(`https://api.freegeoip.app/json/?apikey=${APIKEY}`, (error, response, body) => {
     // console.log("errr:", error);
     console.log('Status Code', response.statusCode);
     // console.log(body);
